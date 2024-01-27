@@ -16,7 +16,7 @@ class Payment(models.Model):
 
 
     def __str__(self):
-        return self.amount
+        return f"email:{self.email} amount:{self.amount}"
 
     def save(self, *args, **kwargs)->None:
         while not self.ref:
