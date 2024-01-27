@@ -9,7 +9,7 @@ class Paystack:
         url=f'{self.base_url}/transaction/verify/{ref}'
         headers={
             'Authorization':f'Bearer {self.PAYSTACK_SECRET_KEY}',
-            'Content-Type':'application/jsonm',
+            'Content-Type':'application/json',
         }
         response=requests.get(url,headers=headers)
         if response.status_code==200:
